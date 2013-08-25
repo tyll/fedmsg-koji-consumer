@@ -9,6 +9,8 @@ Running
 .. code-block:: bash
 
    sudo yum install fedmsg-hub
-   sudo cp config.py /etc/fedmsg.d/kojiconsumer.py
+   # Required to configure the entry point for fedmsg-hub
    python setup.py egg_info
+   # fedmsg-hub reads fedmsg-config.py from the current working directory and
+   # enables kojiconsumer
    PYTHONPATH=$(pwd) fedmsg-hub
